@@ -4,7 +4,7 @@ import { getBooksQuery } from '../Queries/Book'
 import BookDetails from './BookDetails';
 
 const BookList = () => {
-    const [Selected, setSelected] = useState("");
+    const [Selected, setSelected] = useState();
     const { data, loading, error } = useQuery(getBooksQuery);
 
     if (loading) return <h1>Loading Books</h1>;
